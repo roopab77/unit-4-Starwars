@@ -1,10 +1,8 @@
 body{
   /* background-image: url("../images/newbg.jpg"); 
 color: white; */
-   background-color: #ff800050;
-   //color: white;  
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  */
-  
+background-image: url("../images/background.jpg");
+color: #f3fbf4;
 }
 
  
@@ -22,6 +20,8 @@ p{
   margin-bottom: 30px;
   margin-right: 10px;
   border-radius: 10px;
+  background-color: #304c3d;
+  color: #f3fbf4;
 }
 
 img

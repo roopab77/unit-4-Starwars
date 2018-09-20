@@ -4,6 +4,7 @@ var charlist = [{
         HealthPoints: 1232,
         Attack: 71,
         Counter: 30,
+        baseattack:71,
         image: "assets/images/image1.jpg"
     },
     {
@@ -11,6 +12,7 @@ var charlist = [{
         HealthPoints: 1700,
         Attack: 120,
         Counter: 70,
+        baseattack:120,
         image: "assets/images/image2.jpg"
     },
     {
@@ -18,6 +20,7 @@ var charlist = [{
         HealthPoints: 1454,
         Attack: 80,
         Counter: 57,
+        baseattack:80,
         image: "assets/images/image3.jpg"
     },
     {
@@ -25,6 +28,7 @@ var charlist = [{
         HealthPoints: 1546,
         Attack: 88,
         Counter: 60,
+        baseattack: 88,
         image: "assets/images/image4.jpg"
     }
 ];
@@ -35,6 +39,10 @@ var EnemySelected = false;
 var myName = "";
 var enemyName = "";
 
+function refresh()
+{
+    location.reload();
+}
 
 function loadCharacters() {
     for (var i = 0; i < charlist.length; i++) {
@@ -102,13 +110,13 @@ $(document).ready(function () {
             var myOBJ = findObjectByKey(charlist, "name", myName);
             var enemyOBJ = findObjectByKey(charlist, "name", enemyName);
             if (myOBJ.HealthPoints > 0 && enemyOBJ.HealthPoints > 0) {
-                enemyOBJ.HealthPoints = enemyOBJ.HealthPoints - myOBJ.Attack;
+                enemyOBJ.HealthPoints = enemyOBJ.HealthPoints - myOBJ.baseattack;
 
                 //$().html("p .healthstats",
                 
                 $("#yourEnemy .charsEnemy #healthstats").html('Health: ' + enemyOBJ.HealthPoints + '<br/>Attack: ' + enemyOBJ.Attack + '<br/>Counter: ' + enemyOBJ.Counter);
-                myOBJ.attack = myOBJ.attack;
-
+                myOBJ.Attack = myOBJ.Attack + myOBJ.baseattack;
+                //alert(myOBJ.Attack);
                 myOBJ.HealthPoints = myOBJ.HealthPoints - enemyOBJ.Counter;
                 $('#yourCharacter .chars #healthstats').html('Health: ' + myOBJ.HealthPoints + '<br/>Attack: ' + myOBJ.Attack + '<br/>Counter: ' + myOBJ.Counter);
 
@@ -123,11 +131,19 @@ $(document).ready(function () {
                 {
                     document.getElementById("attackText").textContent =  "You won. ";
                 }
+                $('#buttons').append('<input type="button" id="refreshBtn" class="btn btn-warning btn-lg" onclick="refresh()" value = "Refresh" />');
 
             }
 
 
         }
     });
+    
+    
+    
+    
+         
 
+    
+    
 });
