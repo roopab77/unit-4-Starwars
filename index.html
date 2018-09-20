@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Star Wars RPG Game</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    
+        <!-- Title Header -->
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h1> STAR WARS ROLE PLAY GAME</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Battle Zone Area -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h4> Choose your avatar...</h4>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div id="characterList">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <!-- Select your enemy aligned right header -->
+                    <h4> Choose your enemies</h4>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div id="enemyList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h2> Battle Zone! </h2>
+                    <div id="attackText"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- This is the Battle Area -->
+                <div class="col-sm-12 col-md-4 col-lg-4 text-center">
+                    <h2> Your Jedi!</h2>
+                    <div class="col-sm-12 col-md-12 col-lg-12 ">
+                        <!-- When you choose your character this is where it is pushed to -->
+                        <div id="yourCharacter">
+
+                            <!-- This is where your character will be dynamically updated -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 text-center">
+                    <!-- This is the attack button -->
+                    <button class="waves-effect waves-light btn-danger btn-lg attackBtn text-center" id="attackBtn">
+                        Attack! </button>
+
+                </div>
+                <div class="col-sm-12 col-md-4 col-md-4 text-center">
+                    <h2> Your Opponent</h2>
+                    <div class="col-sm-12 col-md-12 col-lg-12 ">
+                        <!-- This is where your chosen enemy will be dynamically updated -->
+                        <div id="yourEnemy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/script.js"></script>
+</body>
+
+</html>
